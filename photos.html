@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+<h1 style="color:#ff000a; font-family:Apple Chancery, cursive; text-align: center; background-color:#0018ff; padding:25px;">DINESH FLEX</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a style="color:#8f00ff;" href="index.html">home</a>&nbsp;&nbsp;&nbsp;
+<a style="color:#8f00ff;" href="servic.html">service</a>&nbsp;&nbsp;&nbsp;
+
+<h1 style="font-size:60;">OUR CUSTOMERS REVIEW</h1>
+
+
+<div class="row">
+  <div class="column">
+    <img src="img9.jpg" onclick="openModal('img9.jpg')" alt="Image 1"><caption style="color:#0003ff;">EVERY EXCELLENT WORK</caption>
+  </div>
+  <div class="column">
+    <img src="img8.jpg" onclick="openModal('img8.jpg')" alt="Image 1"><caption>very fast and good quality</caption>
+  </div>
+  <div class="column">
+    <img src="img7.jpg" onclick="openModal('img7.jpg')" alt="Image 3">
+  </div>
+   <div class="column">
+    <img src="img6.jpg" onclick="openModal('img6.jpg')" alt="Image 3">
+  </div>
+   <div class="column">
+    <img src="img5.jpg" onclick="openModal(img5.jpg')" alt="Image 4">
+  </div>
+   <div class="column">
+    <img src="img4.jpg" onclick="openModal('fimg4.jpg')" alt="Image 3">
+  </div>
+ <div class="column">
+    <img src="img3.jpg" onclick="openModal('img3.jpg')" alt="Image 6">
+  </div>
+   <div class="column">
+    <img src="img2.jpg" onclick="openModal('img2.jpg')" alt="Image 7">
+  </div>
+   <div class="column">
+    <img src="img1.jpg" onclick="openModal('/img1.jpg')" alt="Image 8">
+  </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
+
+<script>
+function openModal(imgSrc) {
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("img01");
+  modal.style.display = "block";
+  modalImg.src = imgSrc;
+}
+
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+</script>
+<marquee style="background-color:#ff001f; color:black padding:25px;">this website design by saikuamr</marquee>
+<footer style="background-color:slategrey;">
+    ALL RIGHT RESERVED DINESH FLEX &copyright 2024
+</footer>
+</div>
+<div>
+    <p>This website design by saikumar
+    <a href="https://saikumar-developer.blogspot.com">saikumar-developer.com</a> you can cantact me with this link. </p>
+</div>
+</body>
+</html>
